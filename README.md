@@ -15,13 +15,7 @@ This is the code for our AISTATS 2020 paper ["Distributionally Robust Bayesian Q
 
 ## Run 
 
-Within the main directory `drbqo`: 
-
-```
-python -m examples.run_drbqo_synthetic 
-
-```
-
+Within the main directory `drbqo`, run: `python -m examples.run_drbqo_synthetic`
 
 ## Reference  
 
