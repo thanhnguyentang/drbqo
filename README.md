@@ -8,6 +8,8 @@ This is the code for our AISTATS 2020 paper ["Distributionally Robust Bayesian Q
 
 * Numpy  
 * Scipy  
+* sklearn  
+* Tensorflow==1.15.0 
 * [GPy](https://sheffieldml.github.io/GPy/)  
 * [GPyOpt](https://github.com/SheffieldML/GPyOpt)
 * [DIRECT](https://pypi.org/project/DIRECT/)    
@@ -15,7 +17,29 @@ This is the code for our AISTATS 2020 paper ["Distributionally Robust Bayesian Q
 
 ## Run 
 
-Within the main directory `drbqo`, run: `python -m examples.run_drbqo_synthetic`
+### Synthetic examples: 
+
+Within the main directory `drbqo`, run: 
+
+```
+    python -m examples.run_drbqo_synthetic
+```
+
+### Cross-validation hyperparameter optimization: 
+
+* Change `DRBQO_MAIN_DIR` in `drbqo/examples/cv/__init__.py` to the full path of your local drbqo main directory 
+
+* To run DRBQO for Elasticnet, within the main directory `drbqo`, run: 
+
+```
+    python -m examples.cv.elasticnet.main
+```
+
+* To run DRBQO for CNN, within the main directory `drbqo`, run: 
+
+```
+    python -m examples.cv.cnn.main
+```
 
 ## Reference  
 
@@ -23,7 +47,7 @@ Within the main directory `drbqo`, run: `python -m examples.run_drbqo_synthetic`
 
 @InProceedings{pmlr-v108-nguyen20a,
   title = 	 {Distributionally Robust Bayesian Quadrature Optimization},
-  author = 	 {Nguyen, Thanh and Gupta, Sunil and Ha, Huong and Rana, Santu and Venkatesh, Svetha},
+  author = 	 {Tang Nguyen, Thanh and Gupta, Sunil and Ha, Huong and Rana, Santu and Venkatesh, Svetha},
   booktitle = 	 {Proceedings of the Twenty Third International Conference on Artificial Intelligence and Statistics},
   pages = 	 {1921--1931},
   year = 	 {2020},
@@ -43,4 +67,6 @@ Within the main directory `drbqo`, run: `python -m examples.run_drbqo_synthetic`
 ## Contact   
 
 [Thanh Tang Nguyen](https://thanhnguyentang.github.io/). 
+
+[MIT License](LICENSE)
 
